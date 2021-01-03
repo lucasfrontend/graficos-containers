@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>Prueba - Gráficos</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="css/Header.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Poncho CSS -->
+    <link rel="stylesheet" href="css/poncho.css" />
+    <!-- Poncho CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+    <!-- LOADER 
+    <div id="preloader">
+        <div class="loader">
+            <img src="images/loader.gif" alt="#" />
+        </div>
+    </div>
+    -->
+
+    <header>
+        <div class="center">
+            <i class="fas fa-plane center icon-plane"></i>
+        </div>
+        <h1 class="center black">Estadísticas</h1>
+        <div class="center estadisticas">
+            <select class="form-control">
+                <option value="">2020</option>
+                <option value="">2019</option>
+                <option value="">2018</option>
+                <option value="">2017</option>
+                <option value="">2016</option>
+                <option value="">2015</option>
+
+
+            </select>
+            <button type="button" class="btn btn-link">Buscar</button>
+        </div>
+        </div>
+
+        <div class="cards-wrapper">
+            <div class="cards row">
+                <div>
+                    <h4 class="blue">Categorías con más sucesos:</h4>
+                    <h7>loren ipsu nosequè</h7>
+                    <h4 class="blue">Categorías con más fatalidades:</h4>
+                    <h7>bla bla bla blalalalalalalal dd d f fasd asd asd asd</h7>
+                </div>
+
+                <div class="row numbers">
+                    <div class="col-md-4">
+                        <h2 class="center green">39</h2>
+
+                        <p class="lead center">Accidentes</p>
+                    </div>
+                </div>
+
+                <div class="row numbers">
+                    <div class="col-md-4">
+                        <h2 class="center red">7</h2>
+
+                        <p class="lead center">Accidentes<br>Fatales</p>
+                    </div>
+                </div>
+
+                <div class="row numbers">
+                    <div class="col-md-4 panel">
+                        <h2 class="center yellow">8</h2>
+
+                        <p class="lead center">Destruidas</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- CANTIDAD DE SUCESOS Y OPERACIONES MENSUALES -->
+    <div class="section margin-top_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+                            <h2><span>Cantidad de Sucesos </span></h2>
+                        </div>
+                        <div class="full">
+                            <a class="btn-year btn-year-left button-theme" href="#">2020</a>
+                        </div>
+                        <div class="full">
+                            <div class="accidents-wrapper">
+                                <!--<h3>Cantidad de sucesos (2020)</h3>-->
+                                <canvas id="eventsNumber" width="auto" height="auto"></canvas>
+                                <div class="legend-wrapper ">
+                                    <div class="legend cards-legend">
+                                        <h6 class="blue">- Cantidad de Sucesos</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main_2 text_align_right">
+                            <h2><span>Operaciones - Mensual </span></h2>
+                        </div>
+                        <div class="full">
+                            <a class="year-wrapper-right button-theme" href="#">2020</a>
+                        </div>
+                        <div class="full">
+                            <div class="accidents-wrapper">
+                                <!--<h3>Cantidad de sucesos (2020)</h3>-->
+                                <canvas id="operations" width="auto" height="auto"></canvas>
+                                <div class="legend-wrapper cards-legend">
+                                    <div class="legend">
+                                        <h6 class="yellow">- Operaciones no comerciales</h6>
+                                        <h6 class="green">- Operaciones especializadas</h6>
+                                        <h6 class="red">- Transporte aéreo comercial</h6>
+                                    </div>
+                                    <div class="legend">
+
+                                        <h6 class="purple">- Operaciones reguladas nacionales</h6>
+                                        <h6 class="black">- Ilegales</h6>
+                                        <h6 class="celeste">- Desconocido</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end section -->
+
+
+    <!-- RESUMEN, GRAFICO DE TORTA -->
+    <div class="section margin-top_50 silver_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 layout_padding_2">
+                    <div class="heading_main text_align_left">
+                        <h2><span>Resumen    </h2>
+                     </div>
+                     <div class="full">
+                        <a class="btn-year btn-year-left button-theme" href="#">2015 -2019</a>
+                     </div>
+                    <div class="full float-right_img">
+                        <div class="doughnut-wrapper">
+                            <canvas id="summary" width="auto" height="auto"></canvas>
+                            <div class="legend ">
+                                <h6 class="yellow">- Operaciones no comerciales</h6>
+                                <h6 class="green">- Operaciones especializadas</h6>
+                                <h6 class="red">- Transporte aéreo comercial</h6>
+                                <h6 class="purple">- Operaciones reguladas nacionales</h6>
+                                <h6 class="black">- Ilegales</h6>
+                                <h6 class="celeste">- Desconocido</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main_2 text_align_right">
+                           <h2><span>2015 -2019</h2>
+                        </div>
+                        
+						<div class="full">
+                            <br>
+                            <p>Del total de sucesos investigados durante los últimos 4 años, la mayor parte corresponde a sucesos de aeronaves que realizaban operaciones comprendidas dentro de la aviación general. Si bien las operaciones de trabajo aéreo, estan bajo la definición de aviación general, a fines estadísticos se contemplan por separado.
+                            <br>
+                            <br>
+                            Nota: los sucesos en los que no se determino la operación que realizaba la aeronave (no denuncia, presunción de ilícito, remoción de restos, etc.) se clasifican como "se desconoce".
+                            <br>
+                            Los sucesos en los que intervienen dos aeronaves se contabilizan como dos operaciones aéreas.</p>
+						</div>
+
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+	<!-- end section -->
+
+    <!-- SUCESOS POR FASE DE VUELO-->
+    <div class="section margin-top_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+                           <h2><span>Sucesos por fase de vuelo </span></h2>
+                    </div>
+                    <div class="full">
+                        <a class="btn-year btn-year-left button-theme" href="#">2015 -2019</a>
+                    </div>
+                    <div class="full">
+                        <div class="accidents-wrapper">
+                            <!--<h3>Cantidad de sucesos (2020)</h3>-->
+                        </div>
+                        <div class="full">
+                            <div class="graphics-wrapper">
+                                <div class="flight-phase-wrapper">
+                                    <canvas id="faseDeVuelo" width="auto" height="auto"></canvas>
+                                    <div class="legend-wrapper ">
+                                        <div class="legend cards-legend">
+                                            <h6 class="blue">- Sucesos por fase de vuelo</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SUCESOS POR CATEGORIA, CONTENEDOR -->
+    <div class="section margin-top_50 silver_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 layout_padding_2">
+                    <div class="full float-right_img">
+                        <div class="full">
+                            <div class="heading_main text_align_left">
+                                <h2><span>Sucesos por Categoria</h2>
+                            </div>
+                            <div class="full">
+                                <a class="btn-year btn-year-left button-theme" href="#">2020</a>
+                             </div>
+                            <div class="full">
+                                <p>
+                                    <br>
+                                    El <a href="http://www.intlaviationstandards.org/apex/f?p=240:1"><span class="link-">CAST/ICAO Common Taxonomy Team (CICTT)</span></a> desarrolló un conjunto de definiciones y taxonomias comunes para los sistemas de
+                                    notificación de incidentes y accidentes de aviación; para la mejora en la capacidad de la comunidad aeronáutica en centrarse en temas comunes de seguridad operacional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 layout_padding_2">
+                    <div class="heading_main_2 text_align_right">
+                        <h2><span>2020</span></h2>
+                        <!-- <h2><span><i class="fa fa-plane"></i></h2> -->
+                    </div>
+                    <div class="accidents-wrapper">
+                        <h3 class="color-poncho"><span>Categorías armonizadas de sucesos</span></h3>
+                        <p>IATA y OACI, implementaron categorías armonizadas de sucesos, para la integración de datos, entre organizaciones, unificando métodos de análisis y métricas para el futuro, de acuerdo The Global Safety Information Exchange (GSIE)</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end section -->
+
+    <!-- ACCIDENTES POR CATEGORIA ARMONIZADA-->
+    <div class="section margin-top_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+                            <h2><span>Sucedos por categoría armonizada</span></h2>
+                        </div>
+                        <div class="full">
+                            <a class="btn-year btn-year-left button-theme" href="#">2015 -2019</a>
+                        </div>
+
+                        <div class="full">
+                            <div class="gp-wrapper">
+                                <canvas id="harmonizedCategory" width="auto" height="auto"></canvas>
+                                <div class="legend-wrapper cards-legend max-width">
+                                    <div class="legend ">
+                                        <h6 class="yellow">- Operaciones no comerciales</h6>
+                                        <h6 class="green">- Operaciones especializadas</h6>
+                                        <h6 class="red">- Transporte aéreo comercial</h6>
+                                    </div>
+                                    <div class="legend">
+                                        <h6 class="purple">- Operaciones reguladas nacionales</h6>
+                                        <h6 class="black">- Ilegales</h6>
+                                        <h6 class="celeste">- Desconocido</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACCIDENTES POR CATEGORIA-->
+    <div class="section margin-top_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 layout_padding_2">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+                            <h2><span>Accidentes por categoría</span></h2>
+                        </div>
+                        <div class="full">
+                            <a class="btn-year btn-year-left button-theme" href="#">2020</a>
+                        </div>
+
+                        <div class="full">
+                            <div class="graphics-wrapper">
+                                <div class="accidents-wrapper">
+                                    <canvas id="accidentCategory" width="auto" height="auto"></canvas>
+                                    <div class="legend-wrapper ">
+                                        <div class="legend cards-legend">
+                                            <h6 class="black">- Accidentes</h6>
+                                            <h6 class="celeste">- Accidentes fatales</h6>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="">
+                                        <div class="">
+                                            <p class="black">SCF-PP (Powerplant failure or malfunction)</p>
+                                            <p class="back">ARC (Abnormal runway contact)</p>
+                                            <h6 class="back">LOC-I (Loss of control, inflight)</h6>    
+                                            <h6 class="black">SCF-NP (System/ component faulure or malcfuntion - No powerplant)</h6>
+                                            <h6 class="black">RE (]Runway excursion)</h6>
+                                            <h6 class="black">LALT (Low altitude operations)</h6>
+                                            <h6 class="black">LOC-G (Loss of control -Ground)</h6>
+                                            <h6 class="black">F-POST</h6>
+                                            <h6 class="back">CTOL</h6>
+                                            <h6 class="back">ADRM</h6>    
+                                            <h6 class="black">OTROS</h6>
+                                            <h6 class="black">FUEL</h6>
+                                            <h6 class="black">CFIT</h6>
+            
+                                            <h6 class="black">UIMC</h6>
+                                            <h6 class="back">GCOL</h6>
+                                            <h6 class="back">MAC</h6>    
+                                            <h6 class="black">RI</h6>
+                                            <h6 class="black">USOS</h6>
+                                            <h6 class="black">AMAC</h6>
+            
+                                            
+                                            <h6 class="black">GTOW</h6>
+                                            <h6 class="back">WILD</h6>
+                                            <h6 class="back">F-NI</h6>    
+                                            <h6 class="black">ICE</h6>
+                                            <h6 class="black">LOLI</h6>
+                                            <h6 class="black">RAMP</h6>
+                                            <h6 class="black">WSTRW</h6>
+                                        </div>
+                                        -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- 
+    <div class="section layout_padding padding_bottom-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="heading_main text_align_center">
+						   <h2><span>Contact</span></h2>
+                        </div>
+					  </div>
+                </div>
+			  </div>
+           </div>
+        </div>
+	 section -->
+
+    <!-- Start Footer 
+
+    <footer class="footer-box">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <div class="footer_blog">
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="footer_blog full white_fonts">
+                        <p class="black">SCF-PP (Powerplant failure or malfunction)</p>
+                        <p class="back">ARC (Abnormal runway contact)</p>
+                        <h6 class="back">LOC-I (Loss of control, inflight)</h6>
+                        <p class="black">SCF-NP (System/ component faulure or malcfuntion - No powerplant)</p>
+                        <p class="black">RE (]Runway excursion)</p>
+                        <p class="black">LALT (Low altitude operations)</p>
+                        <p class="black">LOC-G (Loss of control -Ground)</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="footer_blog full white_fonts">
+                        <p class="black">SCF-PP (Powerplant failure or malfunction)</p>
+                        <p class="back">ARC (Abnormal runway contact)</p>
+                        <h6 class="back">LOC-I (Loss of control, inflight)</h6>
+                        <p class="black">SCF-NP (System/ component faulure or malcfuntion - No powerplant)</p>
+                        <p class="black">RE (]Runway excursion)</p>
+                        <p class="black">LALT (Low altitude operations)</p>
+                        <p class="black">LOC-G (Loss of control -Ground)</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="footer_blog full white_fonts">
+                        <p class="black">SCF-PP (Powerplant failure or malfunction)</p>
+                        <p class="back">ARC (Abnormal runway contact)</p>
+                        <h6 class="back">LOC-I (Loss of control, inflight)</h6>
+                        <p class="black">SCF-NP (System/ component faulure or malcfuntion - No powerplant)</p>
+                        <p class="black">RE (]Runway excursion)</p>
+                        <p class="black">LALT (Low altitude operations)</p>
+                        <p class="black">LOC-G (Loss of control -Ground)</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer> 
+    -->
+
+
+    <div class="footer_bottom celeste">
+        <div class="container celeste">
+            <div class="row">
+                <div class="col-12">
+                    <div class="jst"></div>
+                    <p class="crp"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <a href="#" id="scroll-to-top" class="btn-year"><i class="fa fa-angle-up"></i></a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/jquery.12.js"></script>
+    <!--
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    -->
+
+
+    <script src="js/main.js"></script>
+    <!-- ALL JS FILES -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL 
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.pogo-slider.min.js"></script>
+    PLUGINS 
+    <script src="js/slider-index.js"></script>
+    -->
+    <script src="js/smoothscroll.js"></script>
+    <!-- 
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script> -->
+    <script src="js/isotope.min.js"></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="https://kit.fontawesome.com/e758643b16.js" crossorigin="anonymous"></script>
+
+    <!--
+    <script src="js/custom.js"></script> -->
+    <script>
+        /* counter js */
+        /*
+(function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+		
+		return $(this).each(function () {
+			// set options for current element
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+			
+			// how many times to update the value, and how much to increment the value on each update
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+			
+			// references & variables that will change with each update
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+			
+			$self.data('countTo', data);
+			
+			// if an existing interval can be found, clear it first
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+			
+			// initialize the element with the starting value
+			render(value);
+			
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+				
+				render(value);
+				
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+				
+				if (loopCount >= loops) {
+					// remove the interval
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+					
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+			
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+	
+	$.fn.countTo.defaults = {
+		from: 0,               // the number the element should start at
+		to: 0,                 // the number the element should end at
+		speed: 1000,           // how long it should take to count between the target numbers
+		refreshInterval: 100,  // how often the element should be updated
+		decimals: 0,           // the number of decimal places to show
+		formatter: formatter,  // handler for formatting the value before rendering
+		onUpdate: null,        // callback method for every time the element is updated
+		onComplete: null       // callback method for when the element finishes updating
+	};
+	
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
+
+
+*/
+
+        /*
+        jQuery(function ($) {
+          // custom formatting example
+          $('.count-number').data('countToOptions', {
+        	formatter: function (value, options) {
+        	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+        	}
+          });
+          
+          // start all the timers
+          $('.timer').each(count);  
+          
+          function count(options) {
+        	var $this = $(this);
+        	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+        	$this.countTo(options);
+          }
+        });
+
+        */
+    </script>
+</body>
+
+</html>
